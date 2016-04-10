@@ -142,8 +142,11 @@ URI options
 
 
 
+
+
+
 // endpoint options: START
-The Twitter component supports 43 endpoint options which are listed below:
+The Twitter component supports 44 endpoint options which are listed below:
 
 [width="100%",cols="2s,1,1m,1m,5",options="header"]
 |=======================================================================
@@ -153,6 +156,7 @@ The Twitter component supports 43 endpoint options which are listed below:
 | accessTokenSecret | common |  | String | The access secret. Can also be configured on the TwitterComponent level instead.
 | consumerKey | common |  | String | The consumer key. Can also be configured on the TwitterComponent level instead.
 | consumerSecret | common |  | String | The consumer secret. Can also be configured on the TwitterComponent level instead.
+| truncate | common | false | boolean | Set the request for truncation: if true tweets longer than 140 chars will be truncated; otherwise those updates may result in an error (e.g. TwitterException).
 | user | common |  | String | Username used for user timeline consumption direct message production etc.
 | bridgeErrorHandler | consumer | false | boolean | Allows for bridging the consumer to the Camel routing Error Handler which mean any exceptions occurred while the consumer is trying to pickup incoming messages or the likes will now be processed as a message and handled by the routing Error Handler. By default the consumer will use the org.apache.camel.spi.ExceptionHandler to deal with exceptions that will be logged at WARN/ERROR level and ignored.
 | sendEmptyMessageWhenIdle | consumer | false | boolean | If the polling consumer did not poll any files you can enable this option to send an empty message (no body) instead.
@@ -193,6 +197,9 @@ The Twitter component supports 43 endpoint options which are listed below:
 | httpProxyUser | proxy |  | String | The http proxy user which can be used for the camel-twitter. Can also be configured on the TwitterComponent level instead.
 |=======================================================================
 // endpoint options: END
+
+
+
 
 
 

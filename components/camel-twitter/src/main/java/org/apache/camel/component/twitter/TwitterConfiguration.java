@@ -46,6 +46,8 @@ public class TwitterConfiguration {
     private String consumerSecret;
     @UriParam
     private String user;
+    @UriParam(defaultValue = "false")
+    private boolean truncate = false;
     @UriParam(label = "filter")
     private String keywords;
     @UriParam(label = "filter")
@@ -268,6 +270,24 @@ public class TwitterConfiguration {
     public void setUserIds(String userIds) {
         this.userIds = userIds;
     }
+
+    /**
+     * Does the user request truncation of long tweets to max 140 chars?
+     * 
+     * @return the truncation flag
+     */
+    public boolean isTruncate() {
+        return truncate;
+    }
+
+    /**
+     * Set the request for truncation: if true tweets longer than 140 chars will be truncated;
+     * otherwise those updates may result in an error (e.g. TwitterException).
+     */
+    public void setTruncate(boolean truncate) {
+        this.truncate = truncate;
+    }
+    
 
     public boolean isFilterOld() {
         return filterOld;
